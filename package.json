@@ -41,7 +41,9 @@
     "release": "gulp release",
     "release-minor": "gulp release --type minor",
     "release-major": "gulp release --type major",
-    "coverage-publish": "aegir-coverage publish"
+    "coverage-publish": "aegir-coverage publish",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "pre-commit": [
     "lint",
@@ -151,7 +153,8 @@
     "temp": "^0.8.3",
     "through2": "^2.0.3",
     "update-notifier": "^2.2.0",
-    "yargs": "8.0.2"
+    "yargs": "8.0.2",
+    "snyk": "^1.189.0"
   },
   "contributors": [
     "Andrew de Andrade <andrew@deandrade.com.br>",
@@ -201,5 +204,6 @@
     "npmcdn-to-unpkg-bot <npmcdn-to-unpkg-bot@users.noreply.github.com>",
     "tcme <hi@this-connect.me>",
     "ᴠɪᴄᴛᴏʀ ʙᴊᴇʟᴋʜᴏʟᴍ <victorbjelkholm@gmail.com>"
-  ]
+  ],
+  "snyk": true
 }
